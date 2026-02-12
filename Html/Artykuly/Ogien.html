@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogień</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+    <link rel="stylesheet" href="/CSS/Tabela.css">
+</head>
+
+<body>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Ogień</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ogień </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Im ogień jest większy tym łatwiej się rozprzestrzenia. Aby określić rozmiar ognia należy zsumować przylegające do siebie pola objęte płomieniami i pomnożyć je razy modyfikator za intensywność ognia. Ten modyfikator wynosi zwykle 1 dla standardowych płomieni. Większe ognie łatwiej się rozprzestrzeniają. Rozprzestrzenienie się ognia następuje na początku inicjatywy 15.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top: 15px; display: flex; justify-content: space-evenly; ">
+                <div style="flex: 0 0 auto;">
+                    <table class="tabela" style="
+                        width: 800px;
+                        height: 500px;
+                        flex: 0 0 auto;">
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                            <col style="width: 40%;">
+                            <col style="width: 20%;">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th colspan="4">Tabela Ognia</th>
+                            </tr>
+                            <tr>
+                                <th>Rozmiar Ognia</th>
+                                <th>Obrażenia</th>
+                                <th>Rzut Obronny</th>
+                                <th>Modyfikator</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1 - 3</td>
+                                <td>D4</td>
+                                <td>DC 5 + [Pola]</td>
+                                <td>-1</td>
+                            </tr>
+                            <tr>
+                                <td>4 - 6</td>
+                                <td>D6</td>
+                                <td>DC 5 + [Pola]</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>7 - 13</td>
+                                <td>2D4</td>
+                                <td>DC 11 + [Pola - 7]/ 2</td>
+                                <td>+1</td>
+                            </tr>
+                            <tr>
+                                <td>14 - 20</td>
+                                <td>2D6</td>
+                                <td>DC 14 + [Pola - 13]/ 2</td>
+                                <td>+2</td>
+                            </tr>
+                            <tr>
+                                <td>21 - 27</td>
+                                <td>3D4</td>
+                                <td>DC 17 + [Pola - 21]/ 2</td>
+                                <td>+4</td>
+                            </tr>
+                            <tr>
+                                <td>≥ 28</td>
+                                <td>3D6</td>
+                                <td>DC 19 + [Pola - 23]/ 2</td>
+                                <td>+7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Przechodzenie przez Ogień </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Gdy istota przebiega przez ogień musi zaliczyć rzut obronny na mądrość albo otrzymuje obrażenia. Zarówno DC rzutu jak i obrażenia zalezą od rozmiaru przemierzanego ognia. Jeżeli wynik rzutu będzie mniejszy o 6 lub więcej od DC na istotę zostaje również nałożony tymczasowy efekt podpalenia. Jeżeli istota przemierza więcej niż 1 pole DC rośnie o 1 za każde przebyte dodatkowe pole.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Stanie na Płonącym Polu </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Jeżeli na początku swojej tury istota znajduje się na płonącym polu, otrzymuje od ognia obrażenia podane w tabeli oraz wykonuje rzut obronny na mądrość. Jeżeli nie zaliczy tego rzutu, zostaje na nią nałożony tymczasowy efekt podpalenia o podanym DC i kości. Jeżeli płonąca istota otrzyma obrażenia od ognia o wyższej kości lub DC, należy zmienić efekt podpalenia na ten zapewniany przez większy ogień.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Przedmioty Łatwopalne </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Niektóre przedmioty są szczególnie łatwopalne (posiadają cechę łatwopalne). Jeżeli po rozprzestrzenieniu się ognia znajdują się na polu przyległym do ognia, należy rzucić kością z tabeli wyżej na cechę łatwopalne, tak jakby otrzymały te obrażenia. Zapalenie się jednego przedmiotu może prowadzić do zapalenia się następnego w tej samej turze.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Rozprzestrzenianie się Ognia </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Na początku inicjatywy 15 należy wykonać rzut kością D10 za każdy aktywny ogień i dodać modyfikatory oparte o jego rozmiar oraz obecne warunki. Przy dodawaniu lub usuwaniu płomieni należy kierować się zdrowym rozsądkiem. Przy usuwaniu płomieni dzielenie ognia jest niedozwolone - wyjątek stanowi zgaszenie konkretnego pola w wyniku akcji istoty.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top: 15px; display: flex; justify-content: space-evenly; ">
+                <div style="flex: 0 0 auto;">
+                    <table class="tabela" style="
+                        width: 600px;
+                        height: 500px;
+                        flex: 0 0 auto;">
+                        <colgroup>
+                            <col style="width: 34%;">
+                            <col style="width: 66%;">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th colspan="2">Tabela Ognia</th>
+                            </tr>
+                            <tr>
+                                <th>Wynik Rzutu</th>
+                                <th>Rozprzestrzenienie się Ognia</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>≤ 1</td>
+                                <td>-2</td>
+                            </tr>
+                            <tr>
+                                <td>2-3</td>
+                                <td>-1</td>
+                            </tr>
+                            <tr>
+                                <td>4 - 6</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>7 - 8</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>9-10</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>≥ 12</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Gaszenie Ognia </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Każda istota może podjąć próbę gaszenia ognia. Aby to zrobić musi wylać na niego wodę lub zasypać piaskiem, zadać obrażenia od zimna albo mieć ten ogień w zasięgu ręki i wykonać Akcje. Aby zgasić płonące pole trzeba zbić jego intensywność do 0. Intensywność ognia to jego modyfikator zwiększony o 3. Gdy jedno pole zostanie zgaszone a działanie istoty umożliwiło jej obniżenie intensywności dalej, może obniżyć intensywność ognia na dowolnym sąsiednim polu. Niezgaszony Ogień odzyskuje całą utraconą intensywność na początku inicjatywy 15.</span>
+            </div>
+            <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Gaszenie Wodą </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Wylanie wody lub wysypanie piasku na pole obniża jego intensywność. Każdy wylany litr obniża intensywność o 1.</span>
+            </div>
+            <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Obrażenia od Zimna </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota wykonuje atak który tak długo jak nie posiada cechy granat ma 100% szanse trafienia i niezmienione obrażenia. Każde zadane 3 Punkty Obrażeń od Zimna zmniejszają intensywność ognia o 1.</span>
+            </div>
+            <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Akcja Gaszenia </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota która ma płonące pole w zasięgu ręki może poświęcić 3 Punkty Akcji (Akcja Ręki) aby spróbować zgasić ogień. Wykonuje wtedy rzut na Mądrość o poziomie trudności z tabeli (Rzut Obronny). Jeżeli go zaliczy obniża intensywność o 1, każde 5 punktów ponad poziom trudności dodatkowo obniża intensywność o 1. Użycie niektórych przedmiotów zapewnia modyfikatory do tego rzutu.</span>
+            </div>            
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+    
+</body>
+</html>

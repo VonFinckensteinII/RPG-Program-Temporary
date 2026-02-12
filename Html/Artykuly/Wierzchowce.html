@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wierzchowce</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+</head>
+
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Komentarz.js"></script>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Wierzchowce</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Wierzchowiec </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Wierzchowcem jest każda istota która może przenosić na grzbiecie inne istoty. Wierzchowce liczą się jako neutralne tak długo jak nikt ich nie dosiada. Duża część neutralnych wierzchowców biedzie starała się opuścić pole bitwy tak szybko jak to możliwe Niektóre wierzchowce są zdolne do wykonywania nawet jeżeli nie posiadają jeźdźca. Nie są wtedy neutralne i posiadają własną inicjatywę używaną gdy jeździec zsiądzie albo zostanie strącony. Mogą również próbować zrzucić swojego jeźdźca. Pola zajmowane przez wierzchowca ale nieposiadające specjalnej funkcji zaznaczane są kolorem jasnoniebieskim.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Jeździec </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Jeźdźcem jest dowolna z istot zajmujących pole jeźdźca. Jeżeli pola jeźdźców zajmowane są przez sojuszników akcje mogą wykonywać oboje. Jeżeli te istoty są sobie wrogie to żadna z nich nie może kontrolować wierzchowca do momentu pozbycia się wroga (wierzchowiec w dalszym ciągu może wykonywać własne akcje). Miejsce jeźdźca jest zaznaczane na zielono i podlega wszystkim zasadom miejsc pasażera. </span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Pasażer </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Pasażerem jest dowolna istota przebywająca na wierzchowcu. Pasażerowie mogą przemieszczać się  i walczyć na przeznaczonych dla nich polach jak na zwykłym terenie. Pola przeznaczone dla pasażerów zaznaczane są na brązowo.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Broń </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Na grzbiecie niektórych wierzchowców można zamontować bron o wadze nie przekraczającej udźwigu wierzchowca. Kilka połączonych ze sobą pól na broń pozwala przenosić 1 większą broń lub kilka mniejszych. Pola zdolne pomieścić broń zaznaczane są czerwoną obwódka i jeżeli nie zajęte przez broń podlegają zasadom swojego koloru.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Bron"></div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Front Jeźdźca </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Gdy na wierzchowcu zarówno pasażerowie jak i jeźdźcy czasami posiadają ograniczone możliwości poruszania się przez co muszą być obróceni w podanym kierunku. Jeżeli kiedykolwiek ich kierunek stanie się inny muszą natychmiast zaliczyć rzut na akrobatykę albo spadają z konia. Ten rzut muszą powtarzać na końcu swojej tury. Strony w które jeździec musi być zwrócony oznaczane są czarnym trójkątem na odpowiedniej ścianie.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; display: flex; justify-content: space-between;">
+                <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                    <img src="/Obrazy/Instrukcja/Eksploracja/Wierzchowce/Kon.png" style="width: 200px; height: 200px;" />
+                    <span class="Std-14-Light" style="max-width: 240px; word-wrap: break-word; text-align: center; line-height: 1;">Koń</span>                      
+                </div>
+                <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                    <img src="/Obrazy/Instrukcja/Eksploracja/Wierzchowce/Slon.png" style="width: 200px; height: 200px;" />
+                    <span class="Std-14-Light" style="max-width: 240px; word-wrap: break-word; text-align: center; line-height: 1;">Słoń</span>                      
+                </div>
+            </div>
+
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:15px;">Jazda na Wierzchowcu</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Dosiadanie / Zsiadanie </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Gdy istota decyduje się dosiąść wierzchowca musi znajdować się na sąsiednim polu i poświecić 2 Punkty Akcji. Jeżeli to możliwe wierzchowiec również zużywa 2 Punkty Akcji. Jeżeli nie jest to możliwe wierzchowiec poświęca tyle punktów ile może. W przypadku zsiadania zasady działają identycznie z tą różnicą że wierzchowiec jest tym który zawsze musi poświecić punkty prędkości a jeździec tylko jeżeli może oraz koszt wynosi 1 Punkt Akcji. Każdy przeciwnik posiadający zasięg może wykonać reakcje przeciw istocie wsiadającej lub zsiadającej.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Wspólna Tura </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Tak długo jak jeździec dosiada wierzchowca może wykonywać akcje zarówno swoje jak i jego. Akcje mogą być wykonywane naprzemiennie lub wszystkie razem. Jeżeli jeździec zsiądzie lub zostanie zrzucony z konia natychmiast traci dostęp do jego akcji. Punkty akcji neutralnych wierzchowców odnawiają się na inicjatywie 16 lub inicjatywie jeźdźca jeżeli ta jest wyższa.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Strącenie Jeźdźca </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Spadnięcie z wierzchowca może nastąpić przy wielu różnych sytuacjach  najpowszechniejszymi z nich są przesuniecie jeźdźca, przesunięcie wierzchowca lub próba wykonania skomplikowanego manewru. Jeżeli jeździec zostanie przesunięty poza pole pasażera zostaje automatycznie strącony z konia. Jeżeli to koń zostanie przesunięty to jeździec musi zaliczyć rzut na akrobatykę albo zostaje strącony. Za każdym razem gdy istota spada z wierzchowca musi zaliczyć rzut na akrobatykę albo zostaje na nią nałożony tymczasowy efekt powalenia.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Spłoszenie Wierzchowca </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Za każdym razem gdy wierzchowiec otrzyma obrażenia jeździec musi zaliczyć rzut na Opiekę nad Zwierzętami o DC 6 + [otrzymane obrażenia]. Jeżeli rzut się nie powiedzie zwierze panikuje i jeżeli tylko może legalnie wykonać ruch natychmiast próbuje się oddalić od zagrożenia i czasami może spróbować zrzucić jeźdźca. Wszystkie spanikowane zwierzęta ruszają się na początku inicjatywy 16 i próbują się oddalić od zagrożenia. W swojej turze jeździec może poświęcić 2 Punkty Akcji aby spróbować uspokoić konia wykonuje wtedy ponownie rzut na Opiekę nad Zwierzętami. Zwierzęta znajdujące się pod wpływem przerażenia automatycznie panikują. Wierzchowce nie będące neutralne oraz te odporne na przerażenie nigdy nie panikują.</span>
+            </div>
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:15px;">Walka z Wierzchowca</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ataki Wręcz z Wierzchowca </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Ze względu na przewagę wysokości ataki wręcz otrzymują dodatkowy modyfikator (zaznaczony w cesze koń). Ale ataki brońmi o zasięgu R1 z cechą Krótka wykonywane są z karą a ataki bronią z cechą kastet są niemożliwe.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ataki Dystansowe z Wierzchowca </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Jeżeli w tej turze wierzchowiec się przemieścił (lub zamierza się przemieścić) ataki dystansowe można wykonywać tylko na optymalnym zasięgu oraz należy wykonywać je z karą.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ataki Obszarowe </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Jeżeli atak obszarowy objął zarówno wierzchowca jak i pasażerów każdy z nich może zadecydować by zamiast rzucać samemu wykorzystać wynik wierzchowca. Tą decyzje należy podjąć przed wykonaniem rzutu przez wierzchowca.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Szarża Wierzchowca </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Gdy wierzchowiec z powodzeniem wykonuje szarże wszyscy jego pasażerowie walczą tak jakby wykonali szarże. Dodatkowo jeżeli chcą na potrzeby liczenia bonusów z szarży  mogą wykorzystać siłę wierzchowca zamiast swojej.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Zapasy z Wierzchowca </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Jeżeli tylko jedna ze stron znajduje się na wierzchowcu posiada przewagę przy rzucie na zapasy. Jeżeli obie znajdują się na wierzchowcach nikt nie otrzymuje przewagi. Gdy tylko istota na wierzchowca wejdzie w zapasy natychmiast spada z wierzchowca ale rzut na powalenie nie jest wymagany (jeżeli istota zadecyduje że chce być powalona dalej może to zrobić).</span>
+            </div>
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+
+        <script>
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Niektóre bronie wymagają również obsługi na konkretnych polach. To wymaganie nie znika gdy broń zostanie zamontowana na wierzchowcu.",
+                link: null});
+            document.getElementById('Komentarz_Bron').innerHTML = html;
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dym</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+    <link rel="stylesheet" href="/CSS/Tabela.css">
+</head>
+
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Komentarz.js"></script>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Dym</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Dym  </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">jest jednym z efektów którymi może zostać objęte pole. Większość dymów jest dobrze widoczna i utrudnia wykonywanie ataków dystansowych. Wszystkie dymy cechują się możliwością przemieszczania silnie uzależniona od wiatru.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Przemieszczenie </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Różne dymy mają różne zdolności do przemieszczania się. Wskazuje na to pierwsza wartość bezpośrednio przy słowie „Dym”. Informuje ona iloma kośćmi D8 należy rzucić. Dym przemieszcza się na początku inicjatywy 17 tuż po wietrze w sposób przyporządkowany tej wartości. Dym może przemieszczać się również za sprawą wiatru, jeżeli wiatr jest dostatecznie silny dym przesuwa się  zgodnie z kierunkiem i prędkością wiatru. Za każde pole przebyte w ten sposób rzuca się 1 kością mniej.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Przemieszczanie"></div>         
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Rozwiewanie Się </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Za każdym razem gdy na kości wypadnie 8 dym rozwiewa się, należy to wtedy odnotować i jeżeli została osiągnięta druga wartość przy słowie „Dym” dym zmniejsza swój rozmiar. Dym zawsze jest kołem i gdy się rozwiewa nowe mniejsze kolo nie może wystawać poza rozmiar poprzedniego.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Rozwiewanie"></div>              
+            <div style="margin-left: 0px; margin-top: 15px; display: flex; justify-content: space-evenly; ">
+                <div style="flex: 0 0 auto;">
+                    <table class="tabela" style="
+                        width: 400px;
+                        height: 400px;
+                        flex: 0 0 auto;">
+                        <colgroup>
+                            <col style="width: 29%;">
+                            <col style="width: 71%;">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th colspan="2">Tabela Ruchu D8</th>
+                            </tr>
+                            <tr>
+                                <th>Wynik Rzutu</th>
+                                <th>Ruch / Efekt</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ruch w Kierunku „1”</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ruch w Kierunku „2”</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Ruch w Kierunku „3”</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ruch w Kierunku „4”</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ruch w Kierunku „5”</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Ruch w Kierunku „6”</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Brak Ruchu</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Dym się Rozwiewa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ograniczenie Widoczności </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Większość dymów wpływa na zdolność wykrywania celów. Widnieją tutaj dwie wartości: pierwsza określa po ilu polach dymu cele należy traktować tak jakby znajdowały się w półmroku, druga mówi po ilu polach dymu należy je traktować jakby znajdowały się w całkowitej ciemności.</span>
+            </div>         
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Efekty na Istoty </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Większość dymów poza utrudnianiem prowadzenia ostrzału wpływa również na istoty znajdujące się w nim. Efekty można podzielić na dwa rodzaje natychmiastowe i długotrwałe. Efekty natychmiastowe wpływają na istotę gdy tylko wejdzie na teren dymu. Jednocześnie działanie efektu kończy się gdy tylko istota opuści dym. Efekty długotrwale sprowadzają się najczęściej do rzutów obronnych. Istota wykonuje je gdy wejdzie w dym i na początku swojej tury jeżeli dalej się w nim znajduje. W przypadku niezaliczenia podlega standardowym zasadom. Jeżeli jedno pole znajduje się pod wpływem kilku chmur tego samego dymu to efekty należy rozpatrywać tylko z jednej chmury.</span>
+            </div>
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+
+    <script>
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Dym porusza się o ilość pól równą prędkości wiatru chyba że jego cechy mówią inaczej.",
+                link: null});
+            document.getElementById('Komentarz_Przemieszczanie').innerHTML = html;
+        })();
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Odpowiednio silny wiatr może automatycznie rozwiewać dym.",
+                link: null});
+            document.getElementById('Komentarz_Rozwiewanie').innerHTML = html;
+        })();
+    </script> 
+    
+</body>
+</html>

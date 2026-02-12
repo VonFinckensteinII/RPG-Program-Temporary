@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odpoczynek</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+</head>
+
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Komentarz.js"></script>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Odpoczynek</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Odpoczynek </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota musi regularnie wypoczywać aby zachować pełną sprawność. Nieprzespana doba (Zazwyczaj ok. 24 godzin) powoduje otrzymanie 1 Poziomu Wyczerpania oraz do najbliższego długiego odpoczynku istota otrzymuje 2 razy więcej Punktów Zmęczenia. Jeżeli istota regularnie zarywa noce czas do wystąpienia objawów się skraca.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Długi Odpoczynek </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Długi odpoczynek twa zazwyczaj 8 godzin z których 6 musi zostać poświęcona na sen a pozostałe 2 mogą być przeznaczone na lekkie aktywności. Odbycie długiego odpoczynku powoduje jednocześnie odbycie krótkiego odpoczynku. Następny długi odpoczynek może być wykonany najwcześniej po 12 godzinach od zakończenia poprzedniego.</span>
+            </div>
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Leczenie </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">Długi odpoczynek przywraca D4 zwiększone o Modyfikator Kondycji oraz dodatkowe D4 zwiększone o Modyfikator Kondycji za każde dwa wykupione zwiększenie życia. W przypadku nieparzystej ilości wykupionych zwiększeń życia wynik należy zaokrąglić w górę.</span>
+                </div>  
+                <div style="margin-left: 25px; margin-top:15px" id="Komentarz_Leczenie"></div>
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Odnowienie Umiejętności </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">Wszystkie zużyte umiejętności i zaklęcia z ograniczoną liczbą użyć na dzień (oznaczone „xD”) zostają odnowione.</span>
+                </div>  
+                <div style="margin-left: 25px; margin-top:15px" id="Komentarz_Odnowienie_Umiejetnosci"></div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Krótki Odpoczynek </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Długi odpoczynek twa zazwyczaj 8 godzin z których 6 musi zostać poświęcona na sen a pozostałe 2 mogą być przeznaczone na lekkie aktywności. Odbycie długiego odpoczynku powoduje jednocześnie odbycie krótkiego odpoczynku. Następny długi odpoczynek może być wykonany najwcześniej po 12 godzinach od zakończenia poprzedniego.</span>
+            </div>
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Zmniejszenie Zmęczenia </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">krótki odpoczynek usuwa wszystkie punkty zmęczenia.</span>
+                </div>
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Odnowienie Umiejętności </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">Wszystkie zużyte umiejętności i zaklęcia z ograniczoną liczbą użyć na potyczkę (oznaczone „xP”) zostają odnowione.</span>
+                </div>
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Standard Życia</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Wypoczynek </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Długotrwałe spożywanie posiłków wysokiej jakości lub odpoczynek w wygodnych kwaterach może zapewnić Istocie kości wypoczynku. Nie jest możliwe posiadanie więcej niż 3 kości wypoczynku.</span>
+            </div>
+            <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Kość Wypoczynku </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Kość wypoczynku może zostać dodana do dowolnego rzutu na który mogą mieć wpływ działania istoty. Kość wypoczynku może zostać alternatywnie wykorzystana by usunąć wyrzuconą ilość punktów zmęczenia. Kość wypoczynku przyjmuje wartości D4, D6, D8, D10, D12. Istota traci kości wypoczynku gdy ich użyje lub gdy odpoczywa w niewygodnych warunkach.</span>
+            </div>
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+
+        <script>
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Rownanie",
+                tresc: "(D4 + [Modyfikator Kondycji]) * (1 + ⌈[Wykupione zwiększenia życia]/2⌉)",
+                link: null});
+            document.getElementById('Komentarz_Leczenie').innerHTML = html;
+        })();
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Podczas Długiego odpoczynku istota odbywa automatycznie Krótki odpoczynek więc odnawia umiejętności i zaklęcia z ograniczoną liczbą użyć na potyczkę.",
+                link: null});
+            document.getElementById('Komentarz_Odnowienie_Umiejetnosci').innerHTML = html;
+        })();
+    </script>
+
+</body>
+</html>

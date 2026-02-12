@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapasy</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+</head>
+
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Komentarz.js"></script>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Zapasy</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Zapasy </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Gdy jedna istota próbuje wykonać dowolną akcje zapasów (Wejść w Zapasy, Zmienić Pozycje, Pogłębić Chwyt, Przemieścić się albo Zakończyć Zapasy) poświęca 3 PA uwzględniając wykonane wcześniej akcje dłoni ,wykonuje akcje obiema dłońmi a następnie wykonuje Rzut na Zapasy przeciwko Rzutowi na Zapasy przeciwnika. Jeżeli Rzut się powiedzie istota kontynuuje turę. Jeżeli przeciwnik posiada wyższy wynik może on poświęcić 1 Punkt Akcji aby potraktować ten rzut jako zainicjowany i wygrany przez siebie. W takiej sytuacji tura istoty która pierwotnie zainicjowała rzut natychmiast się kończy.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Zapasy"></div>
+
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:15px;">Akcje Zapasów</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Wejście w Zapasy </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Aby wejść w zapasy Istota musi znajdować się obok przeciwnika. Przed wykonaniem rzutu na zapasy przeciwnik może wykorzystać swoje PA aby wykonać atak reakcji według normalnych zasad albo zadecydować że sam zamiast rzutu na zapasy wykona standardowy rzut defensywny (atakujący dalej rzuca na zapasy). Jeżeli rzut na zapasy się powiedzie to obie istoty znajdują się w zapasach a istota atakująca znajduje się w Silnej Pozycji. Podczas wejścia w zapasy istota decyduje czy zapasy mają następować na stojąco czy czy obie istoty zostają powalone. W przypadku ataków pomiędzy istotami w zapach efekty wynikające z powalenia nie są liczone. Jeżeli obrońca wygrał korzystając z rzutu defensywnego nie może potraktować tych zapasów jako zainicjowanych i wykonanych przez siebie.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Silna Pozycja </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota wyraźnie wygrywa walkę. W swojej Turze może wykonać Atak trzymaną Bronią, Przemieścić się Pogłębić Chwyt albo Zakończyć Zapasy. Jeżeli chce Zakończyć zapasy może to zrobić nie zużywając Punktów Akcji.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Słaba Pozycja </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota wyraźnie przegrywa walkę. W swojej Turze może wykonać Atak trzymaną Bronią, Zmienić Pozycje albo Zakończyć Zapasy.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Atak Bronią </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota wykonuje atak trzymaną przez nią bronią. Jeżeli broń posiada cechę Kastet Istota w Silnej Pozycji może wykonać atak normalnie, natomiast Istota w Pozycji Słabej wykonuje ten atak z karą. Jeżeli broń Posiada zasięg R1 i cechę krótka może nią atakować wyłącznie istota w pozycji silnej, wykonuje to jednak z karą.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Atak Bronią Dystansowa </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Atak bronią dystansową są niemożliwe chyba że ta broń jest załadowana oraz posiada cechy „kastet” i „spust”. Należy wtedy wykonać przeciwstawny rzut na zręczność (liczony odpowiednio jako rzut ofensywny i defensywny) do którego można dołożyć modyfikator z „Zapasów” (ale nie z siły). Niezależnie od wyniku ataku pocisk zostaje wystrzelony a broń nie może być przeładowana aż do zakończenia zapasów.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Zmiana Pozycji </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota znajdująca się w Słabej Pozycji Stara się ją zmienić na Pozycje Silną. Wykonuje w tym celu Standardowy Rzut na Zapasy. Jeżeli zmiana pozycji się powiedzie wszystkie pogłębienia zostają usunięte. Jeżeli walka odbywała się na stojąco nowa istota w pozycji silnej może zadecydować czy chce aby oby wszyscy uczestnicy zostali powaleni.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Pogłębienie Chwytu </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota w Pozycji Silnej stara się dodatkowo zwiększyć swoją przewagę. Wykonuje w tym celu Standardowy Rzut na Zapasy. Jeżeli zmiana się powiedzie uczestnicy otrzymują kolejne modyfikatory.</span>
+            </div>
+            <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Poziom I </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Gdy atakowana przez Istotę w pozycji silnej, Istota w pozycji słabej posiada karę przy rzutach defensywnych.</span>
+            </div>
+            <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Poziom II </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Podczas ataku Istota w pozycji silnej posiada przewagę przy rzutach ofensywnych. </span>
+            </div>
+            <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Poziom III </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Jedyną akcją jaką Istota w Słabej pozycji może wykonać jest Zakończenie Zapasów. Dodatkowo wykonuje ten rzut z karą oraz Ataki Postronne wykonywane przeciw niej otrzymują cechę Wymuszenie (Si,Zr). Ataki dystansowe mogą obierać Istotę w pozycji słabej bezpośrednio za cel.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Zapasy Przeciwko Wielu Wrogom </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Przebiegają według standardowych zasad z tą różnicą gdy Istota próbuje wykonać akcje musi wygrać rzut na zapasy przeciwko każdemu z przeciwników z osobna. Dodatkowo może wykorzystać ich porażkę tylko jeżeli każdy z przeciwników przegrał rzut na zapasy. Jeżeli do samotnej istoty dołączy sojusznik należy natychmiast podzielić te zapasy na 2 niezależne (strona z przewagą liczebną decyduje jak się podzieli). Gdy sojusznik dołącza do strony która znajduje się w pozycji silnej, natychmiastowo otrzymuje wszystkie pogłębiania które zdobyła jego strona. Gdy istota dołącza do zapasów w których obie strony są powalone sama również otrzymuje ten efekt.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ruch w Zapasach </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">w zapasach może się przemieszczać wyłącznie istota w pozycji silnej. Jeżeli chce to zrobić musi wygrać rzut na zapasy oraz poza normalnym kosztem ruchu zapłacić 1 PA za każde pole przebyte przez przeciwnika. Ten koszt jest mnożony razy trudny teren ale nigdy nie może być poniżej 1 PA.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Ruch_w_Zapasach"></div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ataki Postronne </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Przeciwko istotom walczącym w zapasach mogą być wykonywane ataki zarówno wręcz jak i dystansowe. Istoty w zapasach wykonują rzut defensywny z karą. Podczas wykonywania ataków dystansowy należy najpierw rzucić kością który uczestnik zapasów został trafiony. Szansa trafienia każdego uczestnika jest taka sama. Po określeniu który z uczestników jest zagrożony należy wykonać atak według standardowych zasad.</span>
+            </div>
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+
+    <script>
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Jeżeli istota obroniła się korzystając z rzuty defensywnego zamiast rzutu na zapasy nie może zapłacić aby potraktować tego rzutu jako zainicjowanego i wygranego przez siebie.",
+                link: null});
+            document.getElementById('Komentarz_Zapasy').innerHTML = html;
+        })();
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Obrót bez ruchu również powoduje ruch przeciwnika.",
+                link: null});
+            document.getElementById('Komentarz_Ruch_w_Zapasach').innerHTML = html;
+        })();
+    </script>
+    
+</body>
+</html>

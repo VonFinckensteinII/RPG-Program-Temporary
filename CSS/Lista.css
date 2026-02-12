@@ -1,0 +1,66 @@
+ul { /*Wymagane by lista sie nie wyjebywala - chuj jeden wie czemu*/
+    list-style-type: none;
+    padding-top: 20px;
+    padding: 0px;
+    width: 100%;
+}
+
+.zakladka-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    border-radius: 0;
+    background-color: #00000000;
+    width: 100%;
+}
+.zakladka-header {
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+    width: 100%;
+}
+.zakladka-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 35px;
+    margin-bottom: 15px;
+}
+
+.rozdzial {
+    text-align: center;
+    padding: 0px;
+    background-color: #00000000;
+    border-radius: 0px;
+    width: 100px; /*powiekszyc by ladnie moglo wyposrodkowac element*/
+    margin-left: -10px;
+    cursor: pointer;
+}
+.rozdzial img {
+    width: 80px;
+    height: 80px;
+}
+.rozdzialy-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px; /* Przerwa pomiędzy rozdziałami */
+    margin-bottom: 10px;
+    flex-direction: row
+}
+.rozdzialy-container.true {
+    margin-top: 10px; /* trzeba jakos to obejsc ale poki co dziala z funkcja przy podwojnym rzedzie */
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.ukrycie {
+    display: none;
+}
+.ukrycie.open {
+     display: block;
+}

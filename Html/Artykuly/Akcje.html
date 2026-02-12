@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akcje</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+</head>
+
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Komentarz.js"></script>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Akcje</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Punkty Akcji </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Każda istota posiada Punkty Akcji które odzyskuje na początku swojej tury. Punkty akcji są wykorzystywane podczas wykonywania każdej czynności. Poniższy Spis opisuje podstawowe czynności, ich zasady oraz limitacje. Poza punktami akcji istota w swojej turze musi śledzić zadeklarowane obrony i akcje wykonywane każda ręką. Zadeklarowane obrony i użycia ręki zerują się na początku i na końcu tury istoty. W dalszej części instrukcji Punkty Akcji są zapisywane symbolem PA.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Przeciążenie </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota może zapewnić sobie dodatkowe PA przyjmując Punkty Zmęczenia. Bazowy koszt wynosi 1 PA za 1 Punkt Zmęczenia. Niektóre wyposażenie zmienia koszt przeciążenia i najpowszechniejszym z nich jest pancerz.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Odpoczynek </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota może wydać 4 PA aby pozbyć się 1 punktu zmęczenia.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Odpoczynek"></div>
+
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:15px;">Akcje Ataku:</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Atak </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Każda broń jest zdolna do wykonywania ataków. Większość podstawowych ataków kosztuje bazowo 3 PA. Jeżeli dana ręka wykonała już wcześniej akcje koszt ataku należy zwiększyć o 2 PA za każdą wykonaną wcześniej akcję.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Atak"></div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Atak Pomocniczy </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Większość broni jest również w stanie wykonać atak pomocniczy. Ten atak musi zostać zadeklarowany wraz z innym atakiem przeciwko temu samemu celowi. Posiada obniżony koszt ale dalej korzysta ze wszystkich cech broni i ataku. Jeżeli istota lub używane bronie nie posiadają odpowiednich cech atak wykonywany jest z karą i nie jest w stanie dodawać modyfikatorów ze statystyk do zadawanych obrażeń.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Szarża </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Atak wykorzystujący poza bronią  prędkość i masę istoty. Istota gdy deklaruje szarże wybiera cel i rzuca kością D6. Wynik tego rzutu odpowiada za ilość pół które istota może przebyć niezależnie od standardowego ruchu. Aby szarża się udała istota musi zakończyć ruch na polu przeciwnika. Jeżeli szarża się uda istota wykonuje atak wręcz z bonusem do ataku i obrażeń równym polom przebytym w linii prostej przed uderzeniem w przeciwnika ale nie większemu niż jej modyfikator z siły. Jeżeli cel jest wyposażony w krótszą broń może wykonać atak reakcji po udanej i zakończonej szarży. Jeżeli szarża się nie uda tura istoty natychmiast się kończy. Bazowy koszt szarży zależy od bazowego kosztu wykonywanego ataku i jest podniesiony o 2 PA.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Szarza_Rownanie"></div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Szarza_Wzmianka"></div>
+
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:15px;">Akcje Ruchu:</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ruch Standardowy </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Ruch pieszy dostępny dla każdej istoty. Podana prędkość istoty podawana jest w wartości za 1 PA. Ilość możliwych do przebycia pól należy zaokrąglić w dół. W ciągu jednej tury istota może wydać maksymalnie 6 PA na ruch. Jeżeli istota wydala przynajmniej 1 PA na ruch może się dowolnie odwracać bez dodatkowych kosztów.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ruch Alternatywny </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Niektóre istoty posiadają alternatywne opcje ruchu. Posiadające swój własny przelicznik. Większość istot jest w stanie pływać z prędkością 1 i wspinać się z prędkością 1.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Wstawanie </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Wstawanie usuwa tymczasowy efekt powalenia, kosztuje 4 PA i umożliwia przeciwnikom atak na reakcji. W tej samej cenie można pomóc wstać sojusznikowi, liczy się to wtedy jako akcja obu rąk ale nie wymaga wolnych dłoni</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Skok </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Skok pozwala pokonywać rożne rozpadliny i braki terenu. Kosztuje 2 PA i pozwala bazowo pokonać 2 kratki. Dodatkowo za każde 2 kratki przebyte przed skokiem w linii prostej (kierunek zgodny ze skokiem) dystans zostaje zwiększony o 1 kratkę ale nie więcej niż modyfikator prędkości istoty. Istota może również zadecydować o przyjęciu tymczasowego efektu powalenia by zwiększyć dystans skoku o 1 kratkę. </span>
+            </div>
+
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:15px;">Akcje Obronne:</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Obrona </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Podstawowa akcja obronna, pozwala istocie wykonywać rzuty obronne przeciw danemu przeciwnikowi bez kary. Bazowo każda istota posiada 1 obronę którą można zadeklarować za darmo. Natomiast każda następna kosztuje 3 PA. Deklaracja obrony jest możliwa wyłącznie jeżeli istota jest wyposażona w broń do walki wręcz albo posiada przynajmniej 2 wolne ręce. </span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Wytężona Obrona </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Akcja obronna możliwa wyłącznie gdy obrońca wykonuje rzut defensywny bez kary. Zapewnia przewagę na ten rzut. Możliwa do użycia tylko raz na atak i kosztuje 2 PA.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Odwrót </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Akcja obronna wykonywana przeciwko wrogowi w zasięgu broni do walki wręcz. Do końca rundy ten przeciwnik nie może wykorzystać reakcji aby zaatakować tą istotę. Kosztuje 3 PA. Nie ma limitu przeciwników na których można jednocześnie użyć odwrotu.</span>
+            </div>
+            
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:15px;">Interakcje:</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Użycie Ekwipunku </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Użycie większości ekwipunku kosztuje 1 PA i większość z nich wymaga wolnej ręki lub bycia wcześniej dobytym.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Dobycie Wyposażenia </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Dobycie większości wyposażenia posiadanego przez istotę w ekwipunku podręcznym kosztuje 1 PA. Gdy istota wykonuje Akcje dobycia wyposażenia płaci koszt wskazany na najdroższym w dobyciu ekwipunku. W ramach tej samej akcji może wyciągnąć dowolną ilość przedmiotów o takim samym lub niższym koszcie dobycia. Jedyną limitacją są charakterystyki przedmiotów i ilość posiadanych kończyn.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Chowanie Wyposażenia </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Chowanie ekwipunku niemal zawsze jest bardziej skomplikowane od jego dobycia, a koszt zależy od wymiarów broni. Każdy przedmiot ma swój koszt ale zwykle koszty wynoszą 1 PA dla przedmiotów podręcznych i broni z cechą Lewak lub Lekka, 2 PA dla większości broni jednoręcznych  i przynajmniej 3 PA dla dużych przedmiotów i broni z cechą dwuręczna lub zasięgiem większym niż R1.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Upuszczenie Przedmiotu </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Upuszczenie przedmiotu zawsze kosztuje 0 PA. Upuszczony przedmiot ląduje na ziemi i może być podniesiony przez dowolną istotę. W ramach tej akcji możliwe jest również przekazanie przedmiotu komuś kto stoi obok tak długo jak posiada ku temu wolną rękę.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Podniesienie Przedmiotu </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Gdy przedmiot lezy na tym samym polu które zajmuje istota ta może go podnieść. Podnoszenie przedmiotu z ziemi podlega tym samym zasadom co dobywanie wyposażenia z tą różnicą że akcja podniesienia ekwipunku pozwala przeciwnikom wykonać Atak Reakcji oraz zawsze kosztuje przynajmniej 1 PA. </span>
+            </div>
+
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:15px;">Reakcje:</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Atak Reakcji </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Część ataków dostępnych dla broni może być wykonywana również na reakcji. Zwykle jego bazowy koszt jest o 1 PA niższy i podlega tym samym zasadom co główny atak.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Obrót </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota może zmienić swoje ustawienie tak by być obrócona przodem (jednym z przednich pól) do przeciwnika. Jeżeli ten przeciwnik się dalej przemieści istota może zadecydować o dalszym obrocie w jego stronę bez dodatkowych kosztów. Wykonanie tej akcji kosztuje 1 PA.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Przygotowanie </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota może zadecydować że jej tura to nie najlepszy moment na działanie i zadeklarować akcje w odpowiedzi na działanie przeciwnika (np. strzał w niego gdy ten opuści osłonę) lub inne wydarzenie. Zadeklarowanie takiego działania kosztuje 1 PA. Jeżeli w momencie aktywacji istota nie posiada dostatecznej ilości PA by wykonać zadeklarowane działanie, przygotowanie przepada.</span>
+            </div>
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+
+    <script>
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Rownanie",
+                tresc: "Koszt Bazowy + 2 PA za każdą wykonaną wcześniej tą ręką akcje.",
+                link: null});
+            document.getElementById('Komentarz_Atak').innerHTML = html;
+        })();
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Akcje odpoczynku można wykonać w dowolnym momencie. Więc można jej użyć by sporzytkować niewykorzystane PA.",
+                link: null});
+            document.getElementById('Komentarz_Odpoczynek').innerHTML = html;
+        })();
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Rownanie",
+                tresc: "Koszt Bazowy + 2 PA + 2 PA za każdą wykonaną wcześniej tą ręką akcje.",
+                link: null});
+            document.getElementById('Komentarz_Szarza_Rownanie').innerHTML = html;
+        })();
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Zwykle tylko jedna broń skorzystać z bonusu do trafienia i obrażeń.",
+                link: null});
+            document.getElementById('Komentarz_Szarza_Wzmianka').innerHTML = html;
+        })();
+    </script>
+    
+</body>
+</html>

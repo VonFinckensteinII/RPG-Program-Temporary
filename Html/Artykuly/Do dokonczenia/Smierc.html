@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Śmierć</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+    <link rel="stylesheet" href="/CSS/Tabela.css">
+</head>
+
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Komentarz.js"></script>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Śmierć</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Rzuty Przeciw Śmierci </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Każda istota posiada indywidualne zdolności do wytrzymywania utraty krwi oraz powrotu do walki. Jest to reprezentowana przez ilość niezaliczonych rzutów które może przetrwać zanim umrze oraz ilość rzutów zaliczonych których potrzebuje by ustabilizować swój stan.</span>
+            </div>             
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Strata Punktów Wytrzymałości</span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Gdy Punkty Wytrzymałości istoty spadną do 0 traci wszystkie niewykorzystane Punkty Akcji, znajduje się w agonii oraz zostaje na nią nałożony tymczasowy efekt powalenia. Gdy Istota znajduje się w agonii w swojej turze nie regeneruje punktów akcji i na jej końcu wykonuje rzut D20 na tabele agonii. W zależności od otrzymanych obrażeń istota może otrzymać dodatkowe negatywne efekty, podczas oceny tych obrażeń nalezy najpierw odjąć punkty wytrzymałosci które istota posiadała na początku ataku a nastpnie porównać pozostałe obrażenia z maksymalnymi punktami wytrzymalości istoty. Po rozważeniu wszystkich ewentualnych konsekwencji nalezy ustawiś punkty wytrzymałosci istoty na 1.</span>
+            </div> 
+            <div style="margin-left: 0px; margin-top: 15px; display: flex; justify-content: space-evenly; ">
+                <div style="flex: 0 0 auto;">
+                    <table class="tabela" style="
+                        width: 400px;
+                        height: 500px;
+                        flex: 0 0 auto;">
+                        <colgroup>
+                            <col style="width: 29%;">
+                            <col style="width: 71%;">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th colspan="2">Tabela Agonii D20</th>
+                            </tr>
+                            <tr>
+                                <th>Wynik Rzutu</th>
+                                <th>Efekt</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Istota otrzymuje 2 niezaliczone rzuty przeciw śmierci.</td>
+                            </tr>
+                            <tr>
+                                <td>2 - 10</td>
+                                <td>Istota otrzymuje 1 niezaliczony rzuty przeciw śmierci.</td>
+                            </tr>
+                            <tr>
+                                <td>11 - 19</td>
+                                <td>Istota otrzymuje 1 zaliczony rzuty przeciw śmierci.</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>Istota otrzymuje wszystkie brakujące zaliczone rzuty przeciw śmierci oraz jeżeli decyduje się powstać nie otrzymuje Poważnych Obrażeń.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="flex: 0 0 auto;">
+                    <table class="tabela" style="
+                        width: 600px;
+                        height: 500px;
+                        flex: 0 0 auto;">
+                        <colgroup>
+                            <col style="width: 35%;">
+                            <col style="width: 65%;">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th colspan="2">Tabela Dodatkowych Efektów</th>
+                            </tr>
+                            <tr>
+                                <th>Przekroczenie<br>PW</th>
+                                <th>Efekt</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>&lt; 25%</td>
+                                <td>Istota nie otrzymuje dodatkowych efektów.</td>
+                            </tr>
+                            <tr>
+                                <td>25% - 49%</td>
+                                <td>Istota otrzymuje 1 niezaliczony rzuty przeciw śmierci.</td>
+                            </tr>
+                            <tr>
+                                <td>50% - 74%</td>
+                                <td>Istota otrzymuje 1 zaliczony rzuty przeciw śmierci oraz 1 Poważna Rane.</td>
+                            </tr>
+                            <tr>
+                                <td>75% - 99%</td>
+                                <td>Istota otrzymuje 1 zaliczony rzuty przeciw śmierci oraz 2 Poważna Rany.</td>
+                            </tr>
+                            <tr>
+                                <td>≥ 100%</td>
+                                <td>Istota natychmiast umiera.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Strata_PW"></div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Stabilizacja Sojusznika</span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Każda istota która posiada 2 wolne ręce może wykonać akcje stabilizacji na sojuszniku w agonii który znajduje sie na sąsiednim polu. Akcja stabilizacji jest akcją obu rąk o koszcie 3PA dodatkowo korzysta ze zwiększonego kosztu oraz podnosi koszt przyszłych akcji o 2. Istota wykonuje wtedy rzut na medycyne. Jeżeli wynik rzutu na medycyne wyniesie 15 lub więcej cel otrzymuje 1 zaliczony rzut przeciwko smierci. za każd 5 powyżej progu otrzymuje dodatkowy zaliczony rzut. Jednak jeżeli wynik wynosi 5 lub mniej albo na kości wypadla "1" cel otrzymuje 1 niezaliczony rzut przeciwko śmierci.</span>
+            </div>
+
+
+
+
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+
+    <script>
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Przyklad",
+                tresc: "Poszukiwacz Przygód posiiadał 4 punkty wytrzymałości z 16 maksymalnych. Atakujący trafiił i wyrzucił 12 punktów obrażeń. 2 punkty pochłoną pancerz, ponieważ przed atakiem miał 4 PW tylko 6 przekracza limit i zostaje porównane z jego 16 maksymalnymi. 6/16 = 37,5% więc dodatkowo cierpi 1 Poważne Obrażenia.",
+                link: null});
+            document.getElementById('Komentarz_Strata_PW').innerHTML = html;
+        })();
+    </script> 
+    
+</body>
+</html>

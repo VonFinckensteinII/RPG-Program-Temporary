@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podróż</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+    <link rel="stylesheet" href="/CSS/Tabela.css">
+</head>
+
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Komentarz.js"></script>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Podróż</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Podróż </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Prędkość podróży jest uzależniona od prędkości najwolniejszego członka drużyny. Czasami podróż może zostać dodatkowo spowolniona lub przyśpieszona przez teren i pogodę. Dokładną prędkość drużyny można określić na podstawie wzoru.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Podroz"></div> 
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ustawienie Drużyny </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Przed wyruszeniem w drogę gracze muszą zadeklarować w jakim szyku idą. Mogą tą decyzje zmienić w dowolnym momencie marszu pod warunkiem że nie trwa właśnie jakieś wydarzenie. Wydarzeniem jest dowolna sytuacja wymagająca od graczy rzutów, podjęcia decyzji lub walki </span>
+            </div>            
+             <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Role Podczas Marszu </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Podczas marszu każdy członek drużyny pełni jedną z określonych ról. Nie wszystkie role muszą być wybrane i nie ma górnego limitu ile osób może pełnić dana role.</span>
+            </div>             
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Przewodnik </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">Jego zadaniem jest określenie gdzie drużyną się zajmuje i wyszukiwanie najlepszej drogi. Operuje w bardzo dużej odległości od grupy a jego rzuty opierają się głównie na Tropieniu, Zbieractwie i Zielarstwie. Może również spróbować zdobyć żywność.</span>
+                </div>   
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Zwiadowca </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">Jego zadaniem jest wyszukiwanie zagrożeń, interesujących obiektów i drogowskazów. Operuje w dużej lub średniej odległości od grupy a jego rzuty opierają się głównie na Percepcji i Przeszukiwaniu.</span>
+                </div>
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Strażnik </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">Jego zadaniem jest reagowanie na bieżące zagrożenia. Operuje w bliskiej odległości od grupy a jego rzuty opierają się głównie o siłę, zręczność i rzuty bojowe (w przypadku magów również o określoną statystykę).</span>
+                </div>
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Specjalne </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">Gracz może zadeklarować że w czasie podróży zajmuje się jakąś  inną czynnością.</span>
+                </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Upadek z Wysokości </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Obrażenia otrzymane od upadku zależą od wysokości upadku i terenu na który istota spadła. Otrzymane obrażenia określa wartość upadku odczytana z Tabeli „Upadek”. Wyniki rzutów oraz cechy niektórych ras pozwalają dodatkowo modyfikować wynik.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Upadek"></div> 
+            <div style="margin-left: 0px; margin-top: 15px; display: flex; justify-content: space-evenly; ">
+                <div style="flex: 0 0 auto;">
+                    <table class="tabela" style="
+                        width: 800px;
+                        height: 400px;
+                        flex: 0 0 auto;">
+                        <colgroup>
+                            <col style="width: 28%;">
+                            <col style="width: 44%;">
+                            <col style="width: 28%;">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th colspan="3">TaTabela Upadku</th>
+                            </tr>
+                            <tr>
+                                <th>Wysokość</th>
+                                <th>Obrażenia</th>
+                                <th>Efekt Dodatkowy</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1 Metr</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2 Metry</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>3 Metry</td>
+                                <td>1 D4 Miażdżonych</td>
+                                <td>-</td>
+                            </tr>                            
+                            <tr>
+                                <td>4 Metry</td>
+                                <td>2 D4 Miażdżonych</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>5 Metrów</td>
+                                <td>3 D4 Miażdżonych</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>6 Metrów</td>
+                                <td>4 D4 Miażdżonych</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>7 Metrów</td>
+                                <td>5 D4 Miażdżonych</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>8 Metrów</td>
+                                <td>6 D4 Miażdżonych</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>9 Metrów</td>
+                                <td>7 D4 Miażdżonych</td>
+                                <td>1 Poważna Rana</td>
+                            </tr>
+                            <tr>
+                                <td>10 Metrów</td>
+                                <td>8 D4 Miażdżonych</td>
+                                <td>1 Poważna Rana</td>
+                            </tr>
+                            <tr>
+                                <td>11 Metrów</td>
+                                <td>9 D4 Miażdżonych</td>
+                                <td>1 Poważna Rana</td>
+                            </tr>
+                            <tr>
+                                <td>12 Metrów</td>
+                                <td>10 D4 Miażdżonych</td>
+                                <td>1 Poważna Rana</td>
+                            </tr>
+                            <tr>
+                                <td>13 Metrów</td>
+                                <td>11 D4 Miażdżonych</td>
+                                <td>1 Poważna Rana</td>
+                            </tr>
+                            <tr>
+                                <td>14 Metrów</td>
+                                <td>12 D4 Miażdżonych</td>
+                                <td>1 Poważna Rana</td>
+                            </tr>
+                            <tr>
+                                <td>15 Metrów</td>
+                                <td>13 D4 Miażdżonych</td>
+                                <td>1 Poważna Rana</td>
+                            </tr>
+                            <tr>
+                                <td>16 Metrów</td>
+                                <td>14 D4 Miażdżonych</td>
+                                <td>2 Poważne Rany</td>
+                            </tr>
+                            <tr>
+                                <td>17 Metrów</td>
+                                <td>16 D4 Miażdżonych</td>
+                                <td>2 Poważne Rany</td>
+                            </tr>
+                            <tr>
+                                <td>18 Metrów</td>
+                                <td>17 D4 Miażdżonych</td>
+                                <td>2 Poważne Rany</td>
+                            </tr>
+                            <tr>
+                                <td>19 Metrów</td>
+                                <td>18 D4 Miażdżonych</td>
+                                <td>2 Poważne Rany</td>
+                            </tr>
+                            <tr>
+                                <td>20 Metrów</td>
+                                <td>19 D4 Miażdżonych</td>
+                                <td>2 Poważne Rany</td>
+                            </tr>
+                            <tr>
+                                <td>21 Metrów</td>
+                                <td>20 D4 Miażdżonych</td>
+                                <td>2 Poważne Rany</td>
+                            </tr>
+                            <tr>
+                                <td>22 Metry</td>
+                                <td>21 D4 Miażdżonych</td>
+                                <td>2 Poważne Rany</td>
+                            </tr>
+                            <tr>
+                                <td>23 Metry</td>
+                                <td>-</td>
+                                <td>Śmierć</td>
+                            </tr>
+                            <tr>
+                                <td>24 Metry</td>
+                                <td>-</td>
+                                <td>Śmierć</td>
+                            </tr>
+                            <tr>
+                                <td>25 Metrów</td>
+                                <td>-</td>
+                                <td>Śmierć</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>     
+
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+
+    <script>
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Rownanie",
+                tresc: "([Prędkość Wybranego Ruchu] * 3 - 1) * 4 km * [Modyfikator Terenu] * [Modyfikator Pogody].",
+                link: null});
+            document.getElementById('Komentarz_Podroz').innerHTML = html;
+        })();
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Rownanie",
+                tresc: "Równanie: [Wysokość Upadku] * [Modyfikator Terenu].",
+                link: null});
+            document.getElementById('Komentarz_Upadek').innerHTML = html;
+        })();
+    </script> 
+    
+</body>
+</html>

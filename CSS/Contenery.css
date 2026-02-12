@@ -1,0 +1,93 @@
+/*Tutaj znajdowac sie beda (raczej) wszystkie stworzone contenery do skonczenia wersji alfa na milos allaha nie ruszac*/
+
+.Uniwersalny {
+    position: absolute; /* Pozycjonowanie absolutne w odniesieniu do rodzica (lub okna) */
+    left: 50%;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    transform: translate(-50%);
+    overflow-y: auto; /* Umożliwia przewijanie w pionie */
+}
+
+.Menu_Glowne {
+    position: absolute; /* Pozycjonowanie absolutne w odniesieniu do rodzica (lub okna) */
+    left: 55%;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 25px;
+    padding-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    overflow-y: auto; /* Umożliwia przewijanie w pionie */
+}
+
+.Nakladka {
+    position: absolute; /* Pozycjonowanie absolutne w odniesieniu do rodzica (lub okna) */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Przyciemniona nakładka */
+    z-index: 5; /* Nakładka ma wyższy z-index, aby była na wierzchu */
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.Okienko-600-Srodek {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background: #000000;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Umożliwia przewijanie w pionie */
+}
+
+.Rog-PG-25 {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto; /* Dopasowanie szerokości kontenera */
+    height: auto;
+}
+
+.Podpis-Centrowany {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.PrzedmiotContainer {
+    display: flex;
+    justify-content: flex-start; /* Ustawienie zdjęcia i tekstu obok siebie */
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.zdjecie {
+    margin-right: 15px; /* Odstęp między zdjęciem a tekstem */
+    margin-bottom: 10px; /* Odstęp od dolnej krawędzi */
+    width: 300px;
+    height: 300px;
+}

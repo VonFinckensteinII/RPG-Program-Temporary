@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Ładowanie...</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Guziki-Przelaczniki.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+    <link rel="stylesheet" href="/CSS/Lista.css">
+
+</head>
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Menu_Pionowe.js"></script>
+    <script src="/JavaScript/Pomocnicze/Karta.js"></script>
+    <script src="/JavaScript/Pomocnicze/pomyslec_nad_nazwa.js"></script>
+    <script src="/JavaScript/Pomocnicze/FetchCach.js"></script>
+
+    <div class="Uniwersalny">
+        <div id="Sekcja1"></div>
+        <div id="Sekcja2"></div>
+        <div id="Karta1"></div>
+
+        <div style="margin-bottom: 50px;"></div>
+    </div>
+
+
+<script>
+
+
+    const karta ={
+        nazwa: "Miecz",
+        bloki:[
+            {typ_bloku:"naglowek broni bialej",
+            dane: 
+                {typ_broni:"miecze",
+                obrona_sila:2,
+                obrona_zrecznosc:-2,
+                cechy_broni:[
+                    {json_lista: "/Html/Robocze/cechy_test.json",
+                        id: 1,
+                        inputy: ["1","1","1"],
+                        koncowka: "eee"
+                    },
+                    { json_lista: "/Html/Robocze/cechy_test.json",
+                        id: 1,
+                        inputy: ["2","2","2"],
+                        koncowka: "eee"
+                    },
+                    {json_lista: "/Html/Robocze/cechy_test.json",
+                        id: 1,
+                        inputy: ["3","3","3"],
+                        koncowka: "eee"
+                }]}
+            }
+        ]
+    };
+        
+    (async () => {
+        const html = await Karta_65x93({nazwa: karta.nazwa, blok_test: karta.bloki[0].dane, bloki:karta.bloki});
+        document.getElementById('Karta1').innerHTML = html;
+    })();
+    (async () => {
+        
+        const html = await Menu_Pionowe({
+            naglowek: "<img class='zakladka-icon' src='${zakladka.adres_ikony_rozdziału}'><span class='Std-50-Uppercase'>Zakładka 1</span>",
+            tresc: "<div class='Std-14'>Treść podstawowa</div>",
+            przelacznik: true,
+            tresc_ekstra: "<div class='Std-14'>Treść dodatkowa widoczna tylko gdy checkbox włączony</div>"});
+        document.getElementById('Sekcja1').innerHTML = html;
+    })();
+    (async () => {
+        document.getElementById('Sekcja2').innerHTML = Menu_Pionowe({
+            naglowek: "<img class='zakladka-icon' src='${zakladka.adres_ikony_rozdziału}'><span class='Std-50-Uppercase'>Zakładka 1</span>",
+            tresc: await Karta_65x93({nazwa: karta.nazwa, blok_test: karta.bloki[0].dane, bloki:karta.bloki}),
+            przelacznik: false,
+            tresc_ekstra: "Treść dodatkowa widoczna tylko gdy checkbox włączony"
+        });
+    })();
+</script>
+
+
+</body>
+</html>

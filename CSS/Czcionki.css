@@ -1,0 +1,283 @@
+/*Std (Standard) - Podstawowa czcionka uzywac gdy sytuacja nie woła o którąś konkretna*/
+
+.Std-50-Uppercase {
+    white-space: normal;
+    font-family: Cascadia Code;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1; /*Bardzo wazne bez tego wyjebuje sie Instrukcja*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px;
+    white-space: pre-line;
+    text-align: justify;
+}
+.Std-22-Uppercase {
+    font-family: Cascadia Code;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+    white-space: pre-line;
+    text-align: justify;
+}
+.Std-14 {
+    margin: 0px 0px 0px 0px;
+    font-family: Cascadia Code;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: none;
+    white-space: pre-line;
+    text-align: justify;
+}
+.Std-14-Light {
+    margin: 0px 0px 0px 0px;
+    font-family: Cascadia Code;
+    font-weight: normal;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: none;
+    white-space: pre-line;
+    text-align: justify;
+}
+.Std-14-Green {
+    margin: 0px 0px 0px 0px;
+    font-family: Cascadia Code;
+    font-weight: bold;
+    font-size: 14px;
+    color: #90ee90;
+    text-transform: none;
+    white-space: pre-line;
+    text-align: justify;
+}
+
+/*Czcionki do Podpisywania Zdejc*/
+.Pod-22 {
+    font-family: Cascadia Code;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+    white-space: pre-line;
+    text-align: center;
+}
+
+/*Czcionki do komentarzy*/ 
+/*Technicznie poprawne ale zobaczyc czy lubimy kolory oraz czy nie mozna usunac powtórzeń w taki czy inny spsoób*/
+.Wzm-14 {
+    display: inline-block;
+    font-family: Cascadia Code;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fdb124;
+    background-color: #271900;
+    border-left: 5px solid #ffa600;
+    padding: 10px;
+	border-radius: 5px;
+}
+    .Wzm-14-Link{
+        text-decoration: none;
+        display: inline-block;
+        font-family: Cascadia Code;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fdb124;
+        background-color: #271900;
+        border-left: 5px solid #ffa500;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .Wzm-14-Link:hover{
+        color: #271900;
+        background-color: #fdb124;
+        border-left: 5px solid #ffffff;
+    }
+.Ost-14 {
+    display: inline-block;
+    font-family: Cascadia Code;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fc3333;
+    background-color: #1a0000;
+    border-left: 5px solid #fc3333;
+    padding: 10px;
+	border-radius: 5px;
+}
+    .Ost-14-Link{
+        text-decoration: none;
+        display: inline-block;
+        font-family: Cascadia Code;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fc3333;
+        background-color: #1a0000;
+        border-left: 5px solid #ff0000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .Ost-14-Link:hover{
+        color: #1a0000;
+        background-color: #fc3333;
+        border-left: 5px solid #ffffff;
+    }
+.Equ-14 {
+	display: inline-block;
+    font-family: Cascadia Code;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6eabfb;
+    background-color: #00122b;
+    border-left: 5px solid #006eff;
+    padding: 10px;
+	border-radius: 5px;
+}
+    .Equ-14-Link{
+        text-decoration: none;
+        display: inline-block;
+        font-family: Cascadia Code;
+        font-size: 14px;
+        font-weight: bold;
+        color: #6eabfb;
+        background-color: #00122b;
+        border-left: 5px solid #006eff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .Equ-14-Link:hover{
+        color: #00122b;
+        background-color: #6eabfb;
+        border-left: 5px solid #ffffff;
+    }
+.Exa-14 {
+	display: inline-block;
+    font-family:  Cascadia Code;
+    font-size: 14px;
+    font-weight: bold;
+    color: #90ee90;
+    background-color: #001600;
+	border-left: 5px solid #009016;
+    padding: 10px;
+	border-radius: 5px;
+}
+    .Exa-14-Link{
+        text-decoration: none;
+        display: inline-block;
+        font-family: Cascadia Code;
+        font-size: 14px;
+        font-weight: bold;
+        color: #90ee90;
+        background-color: #001600;
+        border-left: 5px solid #009016;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .Exa-14-Link:hover{
+        color: #001600;
+        background-color: #90ee90;
+        border-left: 5px solid #ffffff;
+    }
+.Che-14 {
+	display: inline-block;
+    font-family: Cascadia Code;
+    font-size: 14px;
+    font-weight: bold;
+    color: #dda0dd;
+    background-color: #1a0f1a;
+    border-left: 5px solid #9932cc;
+    padding: 10px;
+	border-radius: 5px;
+}
+    .Che-14-Link{
+        text-decoration: none;
+        display: inline-block;
+        font-family: Cascadia Code;
+        font-size: 14px;
+        font-weight: bold;
+        color: #dda0dd;
+        background-color: #1a0f1a;
+        border-left: 5px solid #9932cc;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .Che-14-Link:hover{
+        color: #1a0f1a;
+        background-color: #dda0dd;
+        border-left: 5px solid #ffffff;
+    }
+
+/*Czcionki do lików*/
+.Link-Pomaranczowy {
+    text-decoration: none; /* Usuwa podkreślenie linku */
+    color: inherit; /* Utrzymuje kolor tekstu z nadklasy */
+    display: inline; /* Link jest traktowany jako element w linii */
+    margin: 0; /* Usuwa marginesy wokół linku */
+    padding: 0; /* Usuwa padding wokół linku */
+    line-height: 0; /* Dostosowuje odstępy między liniami, jeśli to konieczne */
+}
+.Link-Pomaranczowy:hover {
+    color: #ff7300; /* Kolor na hover (możesz zmienić na inny) */
+}
+
+/*Kar (Karta) - Czcionka używanana na kartach*/
+/*Czcionka do kart zastanowic sie czy powinna byc w czcionkach czy kartach*/
+.Kar-20{
+    font-family: Cascadia Code;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: pre-line;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+.Kar-18{
+    font-family: Cascadia Code;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: pre-line;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+.Kar-15{
+    font-family: Cascadia Code;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: pre-line;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+.Kar-10{
+    font-family: Cascadia Code;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: pre-line;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+/*PlH (Placeholder) - Czcionka używana gdy zapis ma maloą wage typu "wyszukaj..."*/
+.PlH-16{
+    font-family: Cascadia Code;
+    font-size: 16px;
+    font-weight: lighter;
+    font-style: oblique;
+    white-space: pre-line;
+    text-align: center;
+    color: rgb(112, 112, 112, 0.6);
+}
+
+
+.Menu-50 {
+    font-family: Cascadia Code;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1; /*Bardzo wazne bez tego wyjebuje sie Instrukcja*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0px;
+    white-space: pre-line;
+}

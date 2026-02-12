@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Renderer cechy RPG</title>
+</head>
+<body>
+
+<script src="/JavaScript/Pomocnicze/pomyslec_nad_nazwa.js"></script>
+<script src="/JavaScript/Pomocnicze/FetchCach.js"></script>
+<script src="/JavaScript/Pomocnicze/Karta.js"></script>
+
+<div id="cechy1"></div>
+<div id="cechy2"></div>
+<div id="cechy3"></div>
+<div id="cechy4"></div>
+
+<script>
+
+const zapis = [
+    {
+        json_lista: "/Html/Robocze/cechy_test.json",
+        id: 1,
+        inputy: ["1","1","1"],
+        koncowka: "eee"
+    },
+    { 
+        json_lista: "/Html/Robocze/cechy_test.json",
+        id: 1,
+        inputy: ["2","2","2"],
+        koncowka: "eee"
+    },
+    {
+        json_lista: "/Html/Robocze/cechy_test.json",
+        id: 1,
+        inputy: ["3","3","3"],
+        koncowka: "eee"
+    }
+  ]
+
+const inputValues = ["2","5","2 tury"];
+const tabela = [["/Html/Robocze/cechy_test.json", 1, ["1","1","1"],"eee"],["/Html/Robocze/cechy_test.json", 1, ["2","2","2"],"eee"],["/Html/Robocze/cechy_test.json", 1, ["3","3","3"],"eee"]];
+
+        (async () => {
+          const html = await Import_Zapisu("/Html/Robocze/cechy_test.json", 1, inputValues);
+          document.getElementById("cechy1").innerHTML = html;
+        })();
+        (async () => {
+          const html = await Import_Zapisu("/Html/Robocze/cechy_test.json", 1, inputValues);
+          document.getElementById("cechy2").innerHTML = html;
+        })();
+        (async () => {
+          const html = await Import_Zapisu("/Html/Robocze/cechy_test.json", 1, inputValues);
+          document.getElementById("cechy3").innerHTML = html;
+        })();
+        (async () => {
+          const html = await Cechy_Karta(zapis);
+          document.getElementById("cechy4").innerHTML = html;
+        })();
+
+</script>
+
+</body>
+</html>

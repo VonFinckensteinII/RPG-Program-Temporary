@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekwipunek</title>
+    <link rel="stylesheet" href="/CSS/Background.css">
+    <link rel="stylesheet" href="/CSS/Contenery.css">
+    <link rel="stylesheet" href="/CSS/Czcionki.css">
+</head>
+
+<body>
+
+    <script src="/JavaScript/Pomocnicze/Komentarz.js"></script>
+
+    <div class="Uniwersalny">
+        <div class="Std-50-Uppercase" style="margin-left: 0px; margin-top:0px;">Ekwipunek</div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ekwipunek </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Ekwipunek jest określany jako całość wyposażenia które przenosi ze sobą poszukiwacz przygód. Podczas walki jest ono zawsze zostawiane a jakiekolwiek dostęp do niego wymaga poświęcenia 8 PA.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Ekwipunek Podręczny </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Każdy poszukiwacz przygód posiada swój ekwipunek podręczny. Uzupełnienie ekwipunku podręcznego wymaga interakcji z Ekwipunkiem Głównym. W ramach ekwipunku podręcznego istota ma ograniczoną ilość miejsc które może wypełnić wybranymi elementami.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; display: flex; justify-content: space-between;">
+                <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                    <img src="/Obrazy/Inne/NoImage.png" style="width: 600px; height: 600px;" />
+                    <span class="Std-14-Light" style="max-width: 720px; word-wrap: break-word; text-align: center; line-height: 1;">Placeholder</span>                      
+                </div>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Pancerz (1 Miejsce) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota może mieć założoną dowolną ilość pancerzy korzystając z najniższych modyfikatorów obrony i najwyższych wartości redukcji. Koszt przeciążenia należy policzyć ze wzoru.</span>
+            </div>            
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Pancerz"></div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Buty (1 Miejsce) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Istota może mieć założoną 1 parę butów dającą specjalne możliwości. Jeżeli to miejsce nie jest wykorzystywane należy założyć że istota nosi podstawowe buty. </span>
+            </div> 
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Rękawice (1 Miejsce) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Rękawice często posiadają przydatne magiczne efekty. Niezależnie czy zestaw zawiera jedną rękawicę czy parę, istota może mieć wyposażony tylko jeden zestaw.</span>
+            </div>  
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Karwasze (1 Miejsce) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Karwasze umożliwiają poświęcenie reakcji by uzyskać podany efekt. Niezależnie od wyglądu karwaszy, istota może założyć tylko jeden zestaw.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Hełm (1 Miejsce) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Hełmy zwykle pozwalają zignorować efekt trafienia krytycznego. Istota może założyć tylko jeden hełm.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Broń Rzucana (4 Miejsca) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Większość poszukiwaczy przygód nosi ze sobą jakąś broń rzucaną. W tym miejscu można umieścić wyłącznie broń z cechą „Rzut”.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Broń (4 Miejsca) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Wszystkie bronie pasują do miejsca na broń. Jeżeli jakakolwiek broń istoty korzysta z amunicji to istota może wyposażyć się dodatkowo w jeden kołczan nie zajmujący stlou ekwipunku. Większość broni zajmuje jedno miejsce ale niektóre zajmują więcej. Do tej grupy zaliczają się głównie bronie drzewcowe i dwuręczne.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px" id="Komentarz_Bron"></div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Medalion (1 Miejsce) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Medaliony często posiadają magiczne moce. Każdy medalion zużywa 1 miejsce i jest zawsze aktywny.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Płaszcz (1 Miejsce) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Płaszcze zapewniają różnorakie bonusy noszącym je istotom. Każdy płaszcz zajmuje 1 miejsce.</span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Pierścień (3 Miejsca) </span>
+                <span class="Std-14-Light">- </span>
+                <span class="Std-14-Light">Każdy pierścień zajmuje 1 miejsce. </span>
+            </div>
+            <div style="margin-left: 0px; margin-top:15px; text-align: justify;">
+                <span class="Std-14">Przedmiot Użytkowy / Broń Rzucana (6 Miejsc):</span>
+            </div>
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Broń Rzucana </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">Większość poszukiwaczy przygód nosi ze sobą jakąś broń rzucaną. W tym miejscu można umieścić wyłącznie broń z cechą „Rzut”.</span>
+                </div>
+                <div style="margin-left: 25px; margin-top:15px; text-align: justify;">
+                    <span class="Std-14">Przedmiot Użytkowy </span>
+                    <span class="Std-14-Light">- </span>
+                    <span class="Std-14-Light">W tym miejscu istota może umieścić praktycznie dowolny przedmiot użytkowy. Większość przedmiotów zajmuje tylko 1 miejsce jeżeli jest inaczej jest to zapisane przy przedmiocie.</span>
+                </div>
+
+            <div style="margin-bottom: 50px;"></div>
+    </div>
+
+    <script>
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Rownanie",
+                tresc: "1 + [Koszt Przeciążenia Wszystkich Pancerzy] – [Ilość Noszonych Pancerzy]",
+                link: null});
+            document.getElementById('Komentarz_Pancerz').innerHTML = html;
+        })();
+        (async () => {
+            const html = await Komentarz ({
+                typ: "Wzmianka",
+                tresc: "Jeżeli istota korzysta z kilku broni tylko jeden kołczan nie zajmuje ekwipunku.",
+                link: null});
+            document.getElementById('Komentarz_Bron').innerHTML = html;
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+[
+{"nazwa": "Ogłuszenie",
+  "id":1,
+  "opis": "Cel może zostać ogłuszony, co utrudnia mu wykonywanie wszystkich akcji.",
+  "zapis": [
+    {"tresc": "(DC {dc} / {ilosc} rzuty)",
+      "zmienna": { "dc": 1, "ilosc": 0 },
+      "typ": { "dc": "liczba", "ilosc": "liczba" },
+      "wyjasnienie": { "dc": "liczba", "ilosc": "liczba" }
+    },
+    {"tresc": "Ogłuszenie", 
+      "zmienna": true, 
+      "typ": null,
+      "wyjasnienie": null
+    },
+    {"tresc": "(DC {dc})",
+      "zmienna": { "dc": 2},
+      "typ": { "dc": "liczba"},
+      "wyjasnienie": { "dc": "liczba"}}
+  ],
+  "komentarz": [
+    {"typ_komentarza": "Wzmianka",
+      "treść": "Jeżeli to pole jest już trudnym terenem należy policzyć wypadkową wartość sumując obie.",
+      "link": null
+    }
+  ],
+  "tagi": ["Pozytywna"]
+}
+]

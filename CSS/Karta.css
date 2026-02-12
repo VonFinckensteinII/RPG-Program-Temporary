@@ -1,0 +1,80 @@
+.karta_tlo {
+    width: 400px;
+    height: 600px;
+    background-image: url('/Obrazy/Karta/Karta_Baza.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 15px;
+}
+
+.karta_naglowek {
+    margin: auto;
+    width: 68%;
+    height: 7%;
+    border: 4px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.karta_stopka {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Cascadia Code;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+}
+    .karta_stopka[data-type="koszt_wyciągnięcia"] {
+        background-image: url('/Obrazy/Karta/Karta_Wyciagniecie.png');
+        color: rgb(0, 0, 0);
+        
+    }
+    .karta_stopka[data-type="koszt_schowania"] {
+        background-image: url('/Obrazy/Karta/Karta_Schowanie.png');
+        color: rgb(255, 255, 255);
+    }
+    .karta_stopka[data-type="waga"] {
+        background-image: url('/Obrazy/Karta/Karta_Waga.png');
+        color: rgb(0, 0, 0);
+    }
+    .karta_stopka[data-type="cena"] {
+        background-image: url('/Obrazy/Karta/Karta_Cena.png');
+        color: rgb(0, 0, 0);
+    }
+    .karta_stopka[data-type="czas_zalozenia"] {
+        background-image: url('/Obrazy/Karta/Karta_Zalozenie.png');
+        color: rgb(0, 0, 0);
+    }
+    .karta_stopka[data-type="czas_zdjecia"] {
+        background-image: url('/Obrazy/Karta/Karta_Zdjecie.png');
+        color: rgb(255, 255, 255);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
