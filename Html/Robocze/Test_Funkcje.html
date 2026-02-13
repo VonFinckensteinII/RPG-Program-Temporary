@@ -66,7 +66,7 @@
         
         const html = await Menu_Pionowe({
             naglowek: "<img class='zakladka-icon' src='${zakladka.adres_ikony_rozdziału}'><span class='Std-50-Uppercase'>Zakładka 1</span>",
-            tresc: "<div class='Std-14'>Treść podstawowa</div>",
+            tresc: "<div class='Std-14', style='margin-top: 10px;'>Treść podstawowa</div>",
             przelacznik: true,
             tresc_ekstra: "<div class='Std-14'>Treść dodatkowa widoczna tylko gdy checkbox włączony</div>"});
         document.getElementById('Sekcja1').innerHTML = html;

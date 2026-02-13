@@ -16,8 +16,13 @@ function Menu_Pionowe(menu) {
         // Okresla co bedzie widoczne po rozwinieciu naglowka i wlaczeniu przelacznika. Nalezy tu wpisac caly kod html elementow ktore maja byc widoczne.
         // String
     return `
-    <div class="menu_poziome">
-        <div class="zakladka-header">
+    <div class="menu_pionowe" style="margin-top: 15px;">
+        <div class="zakladka" style="
+            display: flex;
+            align-items: center;
+            margin-right: 35px;
+            width: 100%;
+        ">
             ${menu.naglowek}
             ${menu.przelacznik ? `
             <label class="Przelacznik">
@@ -39,12 +44,12 @@ function Menu_Pionowe(menu) {
 }
 
 document.addEventListener("click", (e) => {
-    const header = e.target.closest(".zakladka-header");
+    const header = e.target.closest(".zakladka");
     if (!header) return;
 
     const GuzikStrzalka = header.querySelector(".Guzik-Strzalka-H50");
     if (e.target === GuzikStrzalka) {
-        const element = header.closest(".menu_poziome");
+        const element = header.closest(".menu_pionowe");
         GuzikStrzalka.classList.toggle("active");
 
         element.querySelector(".ukrycie").style.display = GuzikStrzalka.classList.contains("active") ? "block" : "none";
@@ -59,7 +64,7 @@ document.addEventListener("change", (e) => {
     if (!e.target.matches(".przelacznik")) return;
 
     const checkbox = e.target;
-    const element = checkbox.closest(".menu_poziome");
+    const element = checkbox.closest(".menu_pionowe");
     const GuzikStrzalka = element.querySelector(".Guzik-Strzalka-H50");
     const dodatkowa_zawartosc = element.querySelector(".zawartosc_warunkowa");
 
