@@ -1,4 +1,4 @@
-// PRawie gotowy do V2 trzeba ogarnac i opisac
+// Prawie gotowy do V2 trzeba ogarnac i opisac
 
 class FetchCache {
     constructor(limit) {

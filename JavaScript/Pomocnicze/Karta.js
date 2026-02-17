@@ -1,12 +1,18 @@
 //Funkcja tworzona z myślą o V2 ale jeszcze nie jest skonczona.
 
+async function Import_Karty(json_lista, id, format) {
+    let pelna_lista = await listaCache.get(json_lista);
+    let karta = pelna_lista.find(c => c.id === id);
+    return await Karta_65x93(karta);
+}
+
 async function Karta_65x93(karta) {
-    console.log((karta.blok_test.typ_broni))
+    console.log(karta.bloki[0])
     const Karta = `
         <div style="
             width: 420px;
             height: 650px;
-            background-image: url('/Obrazy/Karta/Karta_Baza.png');
+            background-image: url('/Obrazy/Karta/Karta_63x95.png');
             background-size: 100% 100%;
             background-position: center;
             background-repeat: no-repeat;
@@ -25,7 +31,7 @@ async function Karta_65x93(karta) {
                 justify-content: center;
                 align-items: center;
             ">
-                <span class="Kar-20">${karta.nazwa}</span>
+                <span class="Kar-20">${karta.fleksja.pojedyncza.mianownik}</span>
             </div>
             <div style="
                 margin-top: 0%;
@@ -34,8 +40,7 @@ async function Karta_65x93(karta) {
                 display: flex;
                 flex-direction: column;
             ">  
-                ${await Podzial_Blokowy(karta.bloki)}
-                ${await Blok_Naglowek_Broni_Bialej(karta.blok_test)}
+                ${await Blok_Naglowek_Broni_Bialej(karta.bloki[0].dane)}
                 ${await Blok_Atak(karta.nazwa)}
                 ${await Blok_Atak(karta.nazwa)}
                 ${await Blok_Umniejetnosc(karta.nazwa)}
@@ -57,13 +62,7 @@ async function Karta_65x93(karta) {
     return Karta;
 }
 
-async function Podzial_Blokowy(bloki){
-    let bloki_razem = ""
-    for (const blok of bloki) {
-        bloki_razem += ""
-    };
-    return bloki_razem;
-};
+
 
 
 
@@ -112,12 +111,12 @@ async function Blok_Naglowek_Broni_Bialej(naglowek) {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        background-image: url('/Obrazy/Karta/Karta_Zalozenie.png');
+                        background-image: url('/Obrazy/Karta/Elipsa.png');
                         background-size: contain;
                         background-position: center;
                         background-repeat: no-repeat;
                     ">
-
+                        <span class="Kar-20">${naglowek.zasieg}</span>
                     </div>
                     <div style="
                         width: 31.5%;
@@ -131,7 +130,7 @@ async function Blok_Naglowek_Broni_Bialej(naglowek) {
                         background-position: center;
                         background-repeat: no-repeat;
                     ">
-                        <span class="Kar-20">${naglowek.obrona_sila > 0 ? `+${naglowek.obrona_sila}` : naglowek.obrona_sila}</span>
+                        <span class="Kar-20">${naglowek.obrona.sila > 0 ? `+${naglowek.obrona.sila}` : naglowek.obrona.sila}</span>
                         <span class="Kar-15">Si</span>
                     </div> 
                     <div style="
@@ -146,7 +145,7 @@ async function Blok_Naglowek_Broni_Bialej(naglowek) {
                         background-position: center;
                         background-repeat: no-repeat;
                     ">
-                        <span class="Kar-20">${naglowek.obrona_zrecznosc > 0 ? `+${naglowek.obrona_zrecznosc}` : naglowek.obrona_zrecznosc}</span>
+                        <span class="Kar-20">${naglowek.obrona.zrecznosc > 0 ? `+${naglowek.obrona.zrecznosc}` : naglowek.obrona.zrecznosc}</span>
                         <span class="Kar-15">Zr</span>
                     </div> 
                 </div> 
@@ -165,25 +164,42 @@ async function Blok_Naglowek_Broni_Bialej(naglowek) {
             </div>
         </div>
     `;
-
     return Naglowek;
 };
 
 async function Blok_Atak(dane) {
-    const Naglowek = `
+    const Atak = `
         <div style="
             margin-top: 1%;
             width: 100%;
             height: 26%;
             border: 4px solid black;
             box-sizing: border-box;
+            display: flex;
         ">
+            <div style="
+                width: 30%;
+                height: 100%;
+                border-right: 2px solid black;
+                box-sizing: border-box;
+            ">
 
+            </div>
+            <div style="
+                width: 70%;
+                height: 100%;
+                border-left: 2px solid black;
+                box-sizing: border-box;
+            ">
+
+            </div>
         </div>
     `;
 
-    return Naglowek;
+    return Atak;
 };
+
+
 
 async function Blok_Umniejetnosc(dane) {
     const Naglowek = `

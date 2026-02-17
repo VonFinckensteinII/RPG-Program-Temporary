@@ -1,0 +1,50 @@
+[
+{"nazwa": "Miecz",
+    "id": 1,
+    "opis":"doprecyzowac zasady",
+    "fleksja":{
+        "pojedyncza":{        
+            "mianownik":"Miecz",
+            "dopelniacz":"Miecza"},
+        "mnoga":{        
+            "mianownik":"Miecze",
+            "dopelniacz":"Mieczy"}
+    },
+    "bloki":[
+        {"typ":"Naglowek_Broni_Bialej",
+        "dane":
+            {"typ_broni":"miecze",
+                "obrona":{"sila":2, "zrecznosc":2},
+                "zasieg":"R1",
+                "cechy_broni":[
+                    {"json_lista": "/Html/Robocze/cechy_test.json",
+                        "id": 1,
+                        "inputy": ["1","1","1"],
+                        "koncowka": " "
+                    }
+                ]
+            }
+        },
+        {"typ":"Atak",
+        "dane":
+            {"modyfikatory":"miecze",
+                "obrona":{"sila":2, "zrecznosc":2},
+                "zasieg":"R1",
+                "cechy_broni":[
+                    {"json_lista": "/Html/Robocze/cechy_test.json",
+                        "id": 1,
+                        "inputy": ["1","1","1"],
+                        "koncowka": " "
+                    }
+                ]
+            }
+        }
+    ],
+    "dane":{
+    },
+    "dodatkowe_karty":null,
+    "produkcja":"doprecyzowac zasady",
+    "dostepnsc":"doprecyzowac zasady",
+    "tagi":[]
+}
+]

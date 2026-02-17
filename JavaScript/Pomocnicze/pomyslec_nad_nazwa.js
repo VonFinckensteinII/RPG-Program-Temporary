@@ -57,7 +57,6 @@ function Zapis_Blokowy(zapis, inputy) {
 
 async function Import_Zapisu(json_lista, id, inputy) {
     let pelna_lista = await listaCache.get(json_lista);
-    console.log(pelna_lista)
     let cecha = pelna_lista.find(c => c.id === id);
 
     return Zapis_Blokowy(cecha.zapis, inputy);
